@@ -1,68 +1,184 @@
-
-body {
-    background-color: rgb(29, 73, 100);
-}
-
-html {
-font-size: 24px;
+* {
+    font-size: 24px;
+    font-family: 'ariel';
     margin: 0;
     padding: 0;
+}
 
+body {
+    background-color: lightgray;
 }
 
 header {
     display: flex;
-    background-color: #00ff5db0;
-    margin: 10px;
-
-    flex-wrap: wrap;
-    border: 5px solid red;
-
-    
+    background-color: midnightblue;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-header main {
-display: flex;
-position: relative;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-left: 20%;
- flex-wrap: wrap;
-
-}
-
-header img {
-display: flex;
-flex-shrink: 1;
-}
-
-header nav {
-display: flex;
-position: relative;
-background-color: black;
-width: 20%;
-height: 20%;
-border: 2px solid red;
-
-    
-
-}
-
-.main-nav li {
+header h1 {
     display: flex;
-    
-
+    padding: 10px;
 }
 
-a:link {
+nav ul {
     display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav li {
+    display: flex;
+    padding: 0 20px;
+}
+
+nav a:link, nav a:visited, #projects a:link, #projects a:visited {
     color: white;
     text-decoration: none;
-    margin: 10px 10px;
+}
+
+nav a:hover {
+    font-size: 1.05rem;
+    color: rgb(206, 206, 206);
+}
+
+#aboutMe {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: darkgray;
+
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 4px solid black;
+    width: 40%;
+    padding: 5px;
+    border-radius: 5%;
+    margin: 1rem;
+    background-color: rgb(67, 67, 67);
+    color: rgb(217, 217, 217);
+}
+
+.box p {
+    padding: 0.5rem 0.5rem;
+}
+
+.box img {
+    display: flex;
+    flex-shrink: 0.2;
+    background-size: contain;
+    width: 90%;
+    border-radius: 5%;
     
 }
 
-a:visited {
-  color: rgb(43, 255, 0); 
+.quote {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quote p {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 4rem auto;
+}
+
+#projects .box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#projects h2 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+#projects li {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    list-style: none;
+}
+
+#projects a:hover {
+    color: rgb(206, 206, 206);
+    text-shadow: 2px 2px black;
+}
+
+#focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 4rem auto;
+    background-color: white;
+}
+
+#focus .box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#focus .box2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#focus li {
+    padding: 5px 5px;
+    margin: 2px 2px;
+    background-color: black;
+    border-radius: 2%;
+    list-style: none;
+}
+
+.fa-brands {
+  transform: scale(1); /* Initial scale */
+  transition: transform 0.3s ease; /* Smooth transition for the scale change */
+}
+
+.fa-brands:hover {
+  transform: scale(1.5); /* Scales the icon to 1.5 times its original size on hover */
+}
+
+footer {
+    display: flex;
+    background-color: midnightblue;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .canHide {
+    display: none;
+}
+
+#aboutMe .box {
+    width: 100%;
+}
+
 }
